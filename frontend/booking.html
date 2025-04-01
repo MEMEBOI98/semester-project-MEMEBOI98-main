@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Room - UH Sugar Land</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .booking-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .booking-form {
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .booking-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .booking-form label {
+      font-weight: bold;
+    }
+
+    .booking-form input,
+    .booking-form select {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .booking-form button {
+      padding: 0.75rem;
+      background-color: #c8102e;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .booking-form button:hover {
+      background-color: #a50d25;
+    }
+
+    .room-preview {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .room-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e0e0e0;
+    }
+
+    .room-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+      object-fit: cover;
+      aspect-ratio: 16/9;
+    }
+
+    .room-card h3 {
+      margin-bottom: 0.5rem;
+      color: #c8102e;
+    }
+
+    @media (max-width: 768px) {
+      .booking-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">UH Sugar Land</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="booking.html">Book a Room</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 style="text-align: center; margin-top: 2rem;">Book a Room</h1>
+    <p style="text-align: center; margin-bottom: 2rem;">Please choose a room and fill out the form to reserve it.</p>
+
+    <div class="booking-container">
+      <div class="booking-form">
+        <form>
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required>
+
+          <label for="time">Time:</label>
+          <select id="time" name="time" required>
+            <option>Select a time slot</option>
+            <option>9:00 AM - 12:00 PM</option>
+            <option>12:00 PM - 3:00 PM</option>
+            <option>3:00 PM - 6:00 PM</option>
+          </select>
+
+          <label for="room">Select Room:</label>
+          <select id="room" name="room" required>
+            <option>Select a room</option>
+            <option>Study Room 1 (Capacity: 4)</option>
+            <option>Study Room 2 (Capacity: 6)</option>
+            <option>Conference Room 1 (Capacity: 12)</option>
+          </select>
+
+          <button type="submit">Submit Request</button>
+        </form>
+      </div>
+
+      <div class="room-preview">
+        <div class="room-card">
+          <h3>Study Room 2</h3>
+          <p><strong>Capacity:</strong> 6 people</p>
+          <p><strong>Features:</strong> Large Table, Marker Board, HDMI Connection</p>
+        </div>
+        <div class="room-card">
+          
+          <h3>Study Room 1</h3>
+          <p><strong>Capacity:</strong> 4 people</p>
+          <p><strong>Features:</strong> Whiteboard, Display Screen, Power Outlets</p>
+        </div>
+        <div class="room-card">
+          <img src
