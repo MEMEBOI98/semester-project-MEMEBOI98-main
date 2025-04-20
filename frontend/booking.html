@@ -9,31 +9,36 @@
 </head>
 
 <body>
+  <!-- Header Section -->
   <header>
+    <!-- Placeholder for dynamically generated menu -->
     <div id="menu-placeholder"></div>
   </header>
 
+  <!-- Main Content Section -->
   <main>
+    <!-- Page Title -->
     <h1 style="text-align: center; margin-top: 2rem;">Book a Room</h1>
     <p style="text-align: center; margin-bottom: 2rem;">Please choose a room and fill out the form to reserve it.</p>
 
-    <!-- Button to load default values -->
-    <div style="text-align: center; margin-bottom: 1rem;">
-      <button id="btnLoadDefaults" style="padding: 0.5rem 1rem;">Load Default Values</button>
-    </div>
-
+    <!-- Booking Form and Room Preview Container -->
     <div class="booking-container">
+      <!-- Booking Form -->
       <div class="booking-form">
         <form>
+          <!-- Input for Full Name -->
           <label for="name">Full Name:</label>
           <input type="text" id="name" name="name" required>
 
+          <!-- Input for Email -->
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required>
 
+          <!-- Input for Date -->
           <label for="date">Date:</label>
           <input type="date" id="date" name="date" required>
 
+          <!-- Dropdown for Time Slot Selection -->
           <label for="time">Time:</label>
           <select id="time" name="time" required>
             <option value="" disabled selected>Select a time slot</option>
@@ -42,6 +47,7 @@
             <option value="3:00 PM - 6:00 PM">3:00 PM - 6:00 PM</option>
           </select>
 
+          <!-- Dropdown for Room Selection -->
           <label for="room">Select Room:</label>
           <select id="room" name="room" required>
             <option value="" disabled selected>Select a room</option>
@@ -52,32 +58,40 @@
             <option value="Conference Room 3 (Capacity: 4)">Conference Room 3 (Capacity: 4)</option>
           </select>
 
+          <!-- Submit Button -->
           <button type="submit" id="btnSubmit">Submit Request</button>
+          <!-- Response Message -->
           <p id="response"></p>
         </form>
       </div>
 
+      <!-- Room Preview Section -->
       <div class="room-preview" id="room-preview" style="display: none;">
+        <!-- Study Room 1 Details -->
         <div class="room-card" id="Study Room 1 (Capacity: 4)">
           <h3>Study Room 1</h3>
           <p><strong>Capacity:</strong> 4 people</p>
           <p><strong>Features:</strong> Whiteboard, Display Screen, Power Outlets</p>
         </div>
+        <!-- Study Room 2 Details -->
         <div class="room-card" id="Study Room 2 (Capacity: 6)">
           <h3>Study Room 2</h3>
           <p><strong>Capacity:</strong> 6 people</p>
           <p><strong>Features:</strong> Large Table, Marker Board, HDMI Connection</p>
         </div>
+        <!-- Conference Room 1 Details -->
         <div class="room-card" id="Conference Room 1 (Capacity: 12)">
           <h3>Conference Room 1</h3>
           <p><strong>Capacity:</strong> 12 people</p>
           <p><strong>Features:</strong> Projector, Conference Phone, Whiteboard</p>
         </div>
+        <!-- Conference Room 2 Details -->
         <div class="room-card" id="Conference Room 2 (Capacity: 6)">
           <h3>Conference Room 2</h3>
           <p><strong>Capacity:</strong> 6 people</p>
           <p><strong>Features:</strong> Large Table, Whiteboard, HDMI Connection</p>
         </div>
+        <!-- Conference Room 3 Details -->
         <div class="room-card" id="Conference Room 3 (Capacity: 4)">
           <h3>Conference Room 3</h3>
           <p><strong>Capacity:</strong> 4 people</p>
@@ -87,24 +101,14 @@
     </div>
   </main>
 
+  <!-- Footer Section -->
   <footer style="text-align: center; padding: 1rem; background-color: #f1f1f1; margin-top: 2rem;">
     &copy; 2023 UH Sugar Land. All rights reserved.
   </footer>
-  <script>
-    // Function to load default values into the form fields
-    function loadDefaultValues() {
-      document.getElementById('name').value = 'John Doe';
-      document.getElementById('email').value = 'johndoe@example.com';
-      document.getElementById('date').value = '2023-12-25';
-      document.getElementById('time').value = '9:00 AM - 12:00 PM';
-      document.getElementById('room').value = 'Study Room 1 (Capacity: 4)';
-    }
 
-    // Attach event listener to the Load Defaults button
-    document.getElementById('btnLoadDefaults').addEventListener('click', loadDefaultValues);
-  </script>
-  <script src="script.js"></script>
-  <script src="menu.js"></script>
+  <!-- JavaScript Files -->
+  <script src="script.js"></script> <!-- Handles booking logic -->
+  <script src="menu.js"></script> <!-- Dynamically generates the menu -->
 </body>
 
 </html>
